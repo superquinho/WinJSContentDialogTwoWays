@@ -1,0 +1,5 @@
+c:\users\malafaiaf\documents\visual studio 2013\Projects\WinJSContentDialogTwoWays\WinJSContentDialogTwoWays\bin\WinJSContentDialogTwoWays.dll.config
+c:\users\malafaiaf\documents\visual studio 2013\Projects\WinJSContentDialogTwoWays\WinJSContentDialogTwoWays\bin\WinJSContentDialogTwoWays.dll
+c:\users\malafaiaf\documents\visual studio 2013\Projects\WinJSContentDialogTwoWays\WinJSContentDialogTwoWays\bin\WinJSContentDialogTwoWays.pdb
+c:\users\malafaiaf\documents\visual studio 2013\Projects\WinJSContentDialogTwoWays\WinJSContentDialogTwoWays\obj\Debug\WinJSContentDialogTwoWays.dll
+c:\users\malafaiaf\documents\visual studio 2013\Projects\WinJSContentDialogTwoWays\WinJSContentDialogTwoWays\obj\Debug\WinJSContentDialogTwoWays.pdb

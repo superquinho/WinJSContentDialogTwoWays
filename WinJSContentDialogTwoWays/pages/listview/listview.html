@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Two Ways Binding</title>
+
+  <!-- WinJS references -->
+  <link href="/library/scripts/winjs/css/ui-light.css" rel="stylesheet" />
+  <script src="/library/scripts/winjs/js/WinJS.js"></script>
+  <script src="/library/scripts/winjs/js/base.js"></script>
+  <script src="/library/scripts/winjs/js/ui.js"></script>
+
+  <script src="/library/scripts/jquery/jquery-2.1.1.js"></script>
+
+  <script src="/library/scripts/utils/helper.js"></script>
+
+
+  <!-- TwoWays settings -->
+  <link href="listview.css" rel="stylesheet" />
+  <script src="listview.js"></script>
+
+</head>
+<body>
+
+  <h2>Click on an item to open the Modal <code>- binding TwoWays (Observable) to Item object</code></h2>
+  <br />
+  <code>Once the modal is closed, the Item will change the image to Strawberry and listview will callBack a function to refresh all the items</code>
+  <br />
+  <br />
+
+  <div>
+
+    <div id="dataTemplate" data-win-control="WinJS.Binding.Template">
+      <div class="dataTemplateContainer">
+        <div class="title" data-win-bind="style.backgroundColor:backColor">
+          <h4 data-win-bind="innerHTML:title"></h4>
+        </div><img src="#" class="image" data-win-bind="src:image" />
+      </div>
+    </div>
+
+    <div id="groupTemplate" data-win-control="WinJS.Binding.Template">
+      <div class="groupTemplateContainer">
+        <div class="title" data-win-bind="textContent:title;groupKey:id"></div>
+      </div>
+    </div>
+
+    <div id="dataTemplateFeatured" data-win-control="WinJS.Binding.Template">
+      <div class="dataTemplateContainer featured">
+        <img src="#" class="image" data-win-bind="src:image" />
+        <div class="title" data-win-bind="textContent:title;style.backgroundColor:backColor"></div>
+      </div>
+    </div>
+    <div id="demolistview" data-win-control="WinJS.UI.ListView">
+    </div>
+
+    <div id="dialogElement" style="max-width: 100%; width:100%;" data-win-control="WinJS.UI.ContentDialog">
+      <div id="modalContent"></div>
+    </div>
+
+  </div>
+
+  <div>
+
+    <br />
+    <br />
+
+    <div id="itemGlanceview">
+
+      <div>
+        <div class="field">
+          <label>
+            Item Title
+          </label>
+          <br />
+          <span data-win-bind="innerHTML:title Binding.Mode.twoway" />
+        </div>
+      </div>
+
+      <div>
+        <div class="field">
+          <label>
+            Image
+          </label>
+          <br />
+          <span data-win-bind="innerHTML: imagine Binding.Mode.TwoWay" />
+        </div>
+      </div>
+
+      <div>
+        <div class="field">
+          <label>
+            BackColor
+          </label>
+          <br />
+          <span data-win-bind="innerHTML: backColor Binding.Mode.TwoWay" />
+        </div>
+      </div>
+
+      <div>
+        <div class="field">
+          <label>
+            Group.ID
+          </label>
+          <br />
+          <span data-win-bind="innerHTML: group.id Binding.Mode.TwoWay" />
+        </div>
+      </div>
+
+      <div>
+        <div class="field">
+          <label>
+            Group.SubGroup.ID
+          </label>
+          <br />
+          <span data-win-bind="innerHTML: group.subGroup.id Binding.Mode.TwoWay" />
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <br />
+  <br />
+  <br />
+  <a href="../dropdown/dropdown.html">Go to DropDown example</a>
+
+
+</body>
+</html>

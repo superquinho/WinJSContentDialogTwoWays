@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>dummy</title>
+
+  <link href="dd_dummy.css" rel="stylesheet" />
+  <script src="dd_dummy.js"></script>
+</head>
+<body>
+  <div id="dummyPage">
+    <h1>Test Modal Dialog</h1>
+    <label for="txtName">Enter your name</label>
+    <input type="text" id="txtName" value="" data-win-bind="value:title Binding.Mode.twoway" />
+
+    <br />
+
+    <h2>HTML Repeater Control with <code>select</code> HTML element with Group</h2>
+    <select id="groupSelect" data-win-control="WinJS.UI.Repeater" data-win-bind="value: group.id Binding.Mode.twoway">
+      <option data-win-bind="value: id; textContent: title"></option>
+    </select>
+
+    <select id="teamSelect" data-win-control="WinJS.UI.Repeater" data-win-bind="value: group.team.id Binding.Mode.twoway">
+      <option data-win-bind="value: id; textContent: name"></option>
+    </select>
+
+    <select id="playerSelect" data-win-control="WinJS.UI.Repeater" data-win-bind="value: group.team.player.id Binding.Mode.twoway">
+      <option data-win-bind="value: id; textContent: name"></option>
+    </select>
+
+    <input type="button" id="btnWelcome" value="Say hello" />
+    <br />
+    <br />
+    <span id="welcomeText"></span>
+    <br />
+    <br />
+    <button id="closeButton">Close</button>
+  </div>
+</body>
+</html>

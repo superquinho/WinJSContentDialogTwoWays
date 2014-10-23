@@ -1,0 +1,31 @@
+﻿body {
+}
+
+/*input[type=text] {
+  width: 300px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.host {
+  margin-top: 50px;
+  margin-left: 50px;
+}*/
+
+#demolistview .win-item{
+    width:100px;
+    height:100px;
+}
+
+.dataTemplateContainer {
+    display:-ms-grid;
+    height:100%;
+    -ms-grid-columns:1fr;
+    -ms-grid-rows:50px 1fr;
+}
+.dataTemplateContainer .title {
+    -ms-grid-row:1;
+}
+.dataTemplateContainer .image {
+    -ms-grid-row-span:2;
+}

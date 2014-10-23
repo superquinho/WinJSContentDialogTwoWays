@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Two Ways Binding</title>
+
+  <!-- WinJS references -->
+  <link href="/library/scripts/winjs/css/ui-light.css" rel="stylesheet" />
+  <script src="/library/scripts/winjs/js/WinJS.js"></script>
+  <script src="/library/scripts/winjs/js/base.js"></script>
+  <script src="/library/scripts/winjs/js/ui.js"></script>
+
+  <script src="/library/scripts/jquery/jquery-2.1.1.js"></script>
+
+  <script src="/library/scripts/utils/helper.js"></script>
+
+  <!-- TwoWays settings -->
+  <link href="dropdown.css" rel="stylesheet" />
+  <script src="dropdown.js"></script>
+
+</head>
+<body>
+
+  <div>
+
+    <div id="dialogElement" style="max-width: 100%; width:100%;" data-win-control="WinJS.UI.ContentDialog">
+      <div id="modalContent"></div>
+    </div>
+
+    <div>
+      <button id="showButton">Show Item on Modal</button>
+    </div>
+
+  </div>
+
+  <div>
+
+    <div id="itemGlanceview">
+
+      <div>
+        <div class="field">
+
+          <br />
+
+          <h2>Select the MVP Player <code>- binding TwoWays (Observable) to MVPPlayer object</code></h2>
+          <select id="groupSelect" data-win-control="WinJS.UI.Repeater" data-win-bind="value: group.id Binding.Mode.twoway">
+            <option data-win-bind="value: id; textContent: title"></option>
+          </select>
+
+          <select id="teamSelect" data-win-control="WinJS.UI.Repeater" data-win-bind="value: group.team.id Binding.Mode.twoway">
+            <option data-win-bind="value: id; textContent: name"></option>
+          </select>
+
+          <select id="pSelect" data-win-control="WinJS.UI.Repeater" data-win-bind="value: group.team.player.id Binding.Mode.twoway">
+            <option data-win-bind="value: id; textContent: name"></option>
+          </select>
+
+        </div>
+      </div>
+
+      <br />
+      <br />
+
+      <div>
+
+        <h2>MVPPlayer object <code>- binding TwoWays (Observable) with HTML element select and ContentDialog HTML page</code></h2>
+
+        <div class="field">
+          <label>
+            Object Title
+          </label>
+          <br />
+          <span data-win-bind="innerHTML:title Binding.Mode.twoway" />
+        </div>
+      </div>
+
+      <div>
+        <div class="field">
+          <label>
+            BackColor
+          </label>
+          <br />
+          <span data-win-bind="innerHTML: backColor Binding.Mode.TwoWay" />
+        </div>
+      </div>
+
+      <div>
+        <div class="field">
+          <label>
+            Group.ID
+          </label>
+          <br />
+          <span data-win-bind="innerHTML: group.id Binding.Mode.TwoWay" />
+        </div>
+      </div>
+
+      <div>
+        <div class="field">
+          <label>
+            Group.Team.ID
+          </label>
+          <br />
+          <span data-win-bind="innerHTML: group.team.id Binding.Mode.TwoWay" />
+        </div>
+      </div>
+
+      <div>
+        <div class="field">
+          <label>
+            Group.Team.Player.Id
+          </label>
+          <br />
+          <span data-win-bind="innerHTML: group.team.player.id Binding.Mode.TwoWay" />
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <br />
+  <br />
+  <br />
+  <a href="../listview/listview.html">Go to ListView example</a>
+
+</body>
+</html>
